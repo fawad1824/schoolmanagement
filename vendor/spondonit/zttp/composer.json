@@ -1,0 +1,25 @@
+{
+    "name": "spondonit/zttp",
+    "description": "A developer-experience focused HTTP client, optimized for most common use cases.",
+    "keywords": ["http", "guzzle"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Spondonit",
+            "email": "support@spondonit.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0|^8.0",
+        "guzzlehttp/guzzle": "^7.2",
+        "tightenco/collect": "^5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "files": [
+            "src/Zttp.php"
+        ]
+    }
+}

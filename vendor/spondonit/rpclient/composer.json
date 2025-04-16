@@ -1,0 +1,38 @@
+{
+    "name": "spondonit/rpclient",
+    "description": "RaudhahPay Gateway wrapper client",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "RaudahPay",
+        "Payment Gateway",
+        "Payment",
+        "Raudhah",
+        "Online Banking",
+        "Malaysia",
+        "Banking",
+        "BMF"
+    ],
+    "authors": [
+        {
+            "name": "SpondonIt",
+            "email": "support@spondonit.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3|^8.0",
+        "ext-json": "*",
+        "spondonit/zttp": "^1.0"
+    },
+    "require-dev": {
+        "vlucas/phpdotenv": "^4.1",
+        "phpunit/phpunit": "^8.5"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "SpondonIt\\Rpclient\\":"src/"
+        }
+    }
+}
