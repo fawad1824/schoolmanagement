@@ -109,7 +109,8 @@
                             Admission Inquiries <i class="fas fa-angle-down"></i>
                         </div>
                         <div class="collapse ps-3" id="admissionInquiries">
-                            <a href="{{ url('admission-query') }}" class="d-block mb-1">Manage Inquiries</a>
+                            <a href="#" class="d-block mb-1">Manage Inquiries</a>
+                            {{-- Screen from adnan --}}
                             <a href="{{ url('studentabsentnotification') }}" class="d-block mb-1">Send SMS to
                                 Inquiries</a>
                         </div>
@@ -132,7 +133,7 @@
             </div>
 
             <!-- Parent Account -->
-            <div>
+            {{-- <div>
                 <div class="menu-header fw-bold mb-3" data-bs-toggle="collapse" data-bs-target="#parentAccount">
                     Parent Account
                 </div>
@@ -140,7 +141,7 @@
                     <a href="#" class="d-block mb-1">Manage Account</a>
                     <a href="#" class="d-block mb-1">Account Request</a>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Staff Management -->
             <div>
@@ -160,7 +161,7 @@
                 <div class="collapse ps-3 mb-3" id="idCardPrint">
                     <a href="{{ url('student-id-card') }}" class="d-block mb-1">Print Student Card</a>
                     <a href="{{ url('generate-id-card') }}" class="d-block mb-1">Print Staff Card</a>
-                    <a href="#" class="d-block mb-1">ID Card Setting</a>
+                    <a href="{{ url('create-id-card') }}" class="d-block mb-1">ID Card Setting</a>
                 </div>
             </div>
 
@@ -222,7 +223,7 @@
                     Online Class
                 </div>
                 <div class="collapse ps-3 mb-3" id="onlineClass">
-                    <a href="#" class="d-block mb-1">Manage Online Class</a>
+                    <a href="{{ url('question-bank') }}" class="d-block mb-1">Manage Online Class</a>
                 </div>
             </div>
 
@@ -257,13 +258,13 @@
                     <a href="{{ url('fees/fine-report') }}" class="d-block mb-1">General Custom Fee</a>
                     <a href="#" class="d-block mb-1">General Transport Fee</a>
                     <a href="#" class="d-block mb-1">Family Fee Calculator</a>
-                    <a href="#" class="d-block mb-1">Direct Payment</a>
+                    <a href="{{ url('wallet/wallet-transaction') }}" class="d-block mb-1">Direct Payment</a>
                     <div>
                         <div class="menu-header mb-1" data-bs-toggle="collapse" data-bs-target="#directPayment">
                             Direct Payment <i class="fas fa-angle-down"></i>
                         </div>
                         <div class="collapse ps-3" id="directPayment">
-                            <a href="#" class="d-block mb-1">Student Payment</a>
+                            <a href="{{ url('fees/balance-report') }}" class="d-block mb-1">Student Payment</a>
                             <a href="#" class="d-block mb-1">Custom Payment</a>
                         </div>
                     </div>
@@ -312,9 +313,8 @@
                 </div>
                 <div class="collapse ps-3 mb-3" id="salaryManagement">
                     <a href="{{ url('payroll') }}" class="d-block mb-1">General Salary</a>
-                    <a href="#" class="d-block mb-1">Manage Salaries</a>
+                    <a href="{{ url('payroll') }}" class="d-block mb-1">Manage Salaries</a>
                     <a href="#" class="d-block mb-1">Loan Management</a>
-                    <a href="#" class="d-block mb-1">Salary Setting</a>
                 </div>
             </div>
 
@@ -324,14 +324,14 @@
                     Report Area
                 </div>
                 <div class="collapse ps-3 mb-3" id="reportArea">
-                    <a href="#" class="d-block mb-1">Fee Defaulter Report</a>
+                    <a href="{{ url('fees/due-fees') }}" class="d-block mb-1">Fee Defaulter Report</a>
                     <a href="#" class="d-block mb-1">Income & Expense Report</a>
-                    <a href="#" class="d-block mb-1">List of Unpaid Invoice</a>
+                    <a href="{{ url('wallet/wallet-report') }}" class="d-block mb-1">List of Unpaid Invoice</a>
                     <a href="#" class="d-block mb-1">Fee Discount Report</a>
                     <a href="#" class="d-block mb-1">Account Summary Report</a>
                     <a href="#" class="d-block mb-1">Detailed Income Report</a>
                     <a href="#" class="d-block mb-1">Detailed Expense Report</a>
-                    <a href="#" class="d-block mb-1">Staff Salary Report</a>
+                    <a href="{{ url('payroll-report') }}" class="d-block mb-1">Staff Salary Report</a>
                     <a href="#" class="d-block mb-1">Admission Date Report</a>
                     <a href="{{ url('student-attendance-report') }}" class="d-block mb-1">Student Information
                         Report</a>
@@ -346,8 +346,8 @@
                 </div>
                 <div class="collapse ps-3 mb-3" id="stock&inventory">
                     <a href="#" class="d-block mb-1">point Of Sale</a>
-                    <a href="#" class="d-block mb-1">Management Categories</a>
-                    <a href="#" class="d-block mb-1">Product & Stock</a>
+                    <a href="{{ url('item-category') }}" class="d-block mb-1">Management Categories</a>
+                    <a href="{{ url('item-store') }}" class="d-block mb-1">Product & Stock</a>
                     <a href="#" class="d-block mb-1">Add Bulk Product</a>
                 </div>
             </div>
@@ -359,12 +359,12 @@
                     Stock & Inventory
                 </div>
                 <div class="collapse ps-3 mb-3" id="ExamManagement">
-                    <a href="#" class="d-block mb-1">Exam Term/Semester list</a>
-                    <a href="#" class="d-block mb-1">Assign Exam Grades</a>
-                    <a href="#" class="d-block mb-1">Marks entry</a>
-                    <a href="#" class="d-block mb-1">Teacher Remarks</a>
-                    <a href="#" class="d-block mb-1">Exam Timetable</a>
-                    <a href="#" class="d-block mb-1">Tabulatation Sheet</a>
+                    <a href="{{ url('exam-type') }}" class="d-block mb-1">Exam Term/Semester list</a>
+                    <a href="{{ url('marks-grade') }}" class="d-block mb-1">Assign Exam Grades</a>
+                    <a href="{{ url('marks-register') }}" class="d-block mb-1">Marks entry</a>
+                    <a href="{{ url('examplan/seatplan') }}" class="d-block mb-1">Teacher Remarks</a>
+                    <a href="{{ url('tabulation-sheet-report') }}" class="d-block mb-1">Exam Timetable</a>
+                    <a href="{{ url('exam') }}" class="d-block mb-1">Tabulatation Sheet</a>
 
 
                     <div>
@@ -372,21 +372,21 @@
                             Positation Holder <i class="fas fa-angle-down"></i>
                         </div>
                         <div class="collapse ps-3" id="positionholder">
-                            <a href="#" class="d-block mb-1">Term/Semester</a>
-                            <a href="#" class="d-block mb-1">Find Result</a>
+                            <a href="{{ url('progress-card-report') }}" class="d-block mb-1">Term/Semester</a>
+                            <a href="{{ url('merit-list-report') }}" class="d-block mb-1">Find Result</a>
                         </div>
                     </div>
 
-                    <a href="#" class="d-block mb-1">Print Admit Card/slip</a>
-                    <a href="#" class="d-block mb-1">Teacher Remarks</a>
+                    <a href="{{ url('examplan/admitcard') }}" class="d-block mb-1">Print Admit Card/slip</a>
+                    <a href="{{ url('student_incident_report') }}" class="d-block mb-1">Teacher Remarks</a>
 
                     <div>
                         <div class="menu-header mb-1" data-bs-toggle="collapse" data-bs-target="#termssemster">
                             Send Marks By SMS <i class="fas fa-angle-down"></i>
                         </div>
                         <div class="collapse ps-3" id="termssemster">
-                            <a href="#" class="d-block mb-1">Term/Semester wise</a>
-                            <a href="#" class="d-block mb-1">Find Result</a>
+                            <a href="{{ url('send-marks-by-sms') }}" class="d-block mb-1">Term/Semester wise</a>
+                            <a href="{{ url('send-marks-by-sms') }}" class="d-block mb-1">Find Result</a>
                         </div>
                     </div>
 
@@ -395,8 +395,8 @@
                             Print Mark Sheet <i class="fas fa-angle-down"></i>
                         </div>
                         <div class="collapse ps-3" id="printMarks">
-                            <a href="#" class="d-block mb-1">Term/Semester wise</a>
-                            <a href="#" class="d-block mb-1">Find Result</a>
+                            <a href="{{ url('online-exam-report') }}" class="d-block mb-1">Term/Semester wise</a>
+                            <a href="{{ url('merit-list-report') }}" class="d-block mb-1">Find Result</a>
                         </div>
                     </div>
                 </div>
@@ -410,8 +410,8 @@
                     Certification
                 </div>
                 <div class="collapse ps-3 mb-3" id="certification">
-                    <a href="{{url('student-certificate')}}" class="d-block mb-1">Certificate Printing</a>
-                    <a href="#" class="d-block mb-1">Certificate Template</a>
+                    <a href="{{ url('student-certificate') }}" class="d-block mb-1">Certificate Printing</a>
+                    <a href="{{ url('student-certificate') }}" class="d-block mb-1">Certificate Template</a>
                 </div>
 
                 <!-- 22. Daily Homework Diary -->
@@ -419,7 +419,7 @@
                     Daily Homework Diary
                 </div>
                 <div class="collapse ps-3 mb-3" id="homework-diary">
-                    <a href="{{url('homework-list')}}" class="d-block mb-1">Add & Manage Diary</a>
+                    <a href="{{ url('homework-list') }}" class="d-block mb-1">Add & Manage Diary</a>
                     <a href="#" class="d-block mb-1">Send Diary via SMS</a>
                 </div>
 
@@ -450,23 +450,23 @@
                     Email Alert
                 </div>
                 <div class="collapse ps-3 mb-3" id="email-alert">
-                    <a href="{{url('send-email-sms-view')}}" class="d-block mb-1">Message to Specific Email</a>
-                    <a href="{{url('email-sms-log')}}" class="d-block mb-1">Sent Email History</a>
+                    <a href="{{ url('send-email-sms-view') }}" class="d-block mb-1">Message to Specific Email</a>
+                    <a href="{{ url('email-sms-log') }}" class="d-block mb-1">Sent Email History</a>
                 </div>
 
                 <!-- 27. School Noticeboard -->
                 <div class="menu-header fw-bold mb-3">
-                    <a href="{{url('notice-list')}}" class="text-decoration-none">School Noticeboard</a>
+                    <a href="{{ url('notice-list') }}" class="text-decoration-none">School Noticeboard</a>
                 </div>
 
                 <!-- 28. Admin Role Management -->
                 <div class="menu-header fw-bold mb-3">
-                    <a href="{{url('role')}}" class="text-decoration-none">Admin Role Management</a>
+                    <a href="{{ url('role') }}" class="text-decoration-none">Admin Role Management</a>
                 </div>
 
                 <!-- 29. Transport -->
                 <div class="menu-header fw-bold mb-3">
-                    <a href="#" class="text-decoration-none">Transport</a>
+                    <a href="{{ url('vehicle') }}" class="text-decoration-none">Transport</a>
                 </div>
 
                 <!-- 30. Management Biometric Device -->
@@ -479,7 +479,7 @@
                     Website Management
                 </div>
                 <div class="collapse ps-3 mb-3" id="website-management">
-                    <a href="{{url('photo-gallery')}}" class="d-block mb-1">General & Gallery Setting</a>
+                    <a href="{{ url('photo-gallery') }}" class="d-block mb-1">General & Gallery Setting</a>
                     <a href="#" class="d-block mb-1">Class To Show</a>
                 </div>
 
@@ -498,10 +498,10 @@
                     Setting
                 </div>
                 <div class="collapse ps-3 mb-3" id="settings">
-                    <a href="{{url('base-setup')}}" class="d-block mb-1">General Setting</a>
-                    <a href="{{url('sms-settings')}}" class="d-block mb-1">SMS Setting</a>
-                    <a href="{{url('email-settings')}}" class="d-block mb-1">Email Setting</a>
-                    <a href="{{url('payment-method-settings')}}" class="d-block mb-1">Payment Setting</a>
+                    <a href="{{ url('base-setup') }}" class="d-block mb-1">General Setting</a>
+                    <a href="{{ url('sms-settings') }}" class="d-block mb-1">SMS Setting</a>
+                    <a href="{{ url('email-settings') }}" class="d-block mb-1">Email Setting</a>
+                    <a href="{{ url('payment-method-settings') }}" class="d-block mb-1">Payment Setting</a>
                 </div>
             </div>
 
